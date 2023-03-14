@@ -1,0 +1,8 @@
+crate 인기있는 아이스크림
+
+인기있는 아이스크림 문제 
+
+SELECT flavor from first_half
+order by TOTAL_ORDER desc, SHIPMENT_ID
+
+
