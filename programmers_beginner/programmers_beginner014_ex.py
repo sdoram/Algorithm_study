@@ -11,10 +11,24 @@
 # 공백도 하나의 문자로 취급합니다.
 
 def solution(cipher, code):
-    return (cipher[code-1::code])
+    answer = ''
+    count = 1
+    for i in cipher:
+        if count % code == 0:
+            answer += i
+        count += 1
+    return answer
 
-# slice끝 설정하는 부분 지우기 <- 없으면 끝까지 실행
-# 0번부터 시작이므로 -1로 처음에 0번을 카운트 하기
+
+def solution2(cipher, code):
+    answer = ''
+    for i, value in enumerate(cipher):
+        if (i+1) % code == 0:
+            answer += value
+    return answer
+
+# 나도 enumerate 같은 것들 활용하고 싶다.
 
 
 print(solution("dfjardstddetckdaccccdegk", 4))
+print(solution2("dfjardstddetckdaccccdegk", 4))

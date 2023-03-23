@@ -20,4 +20,13 @@ def solution(n):
     return answer
 
 
+def solution2(n):
+    answer = 0
+    for i in range(n+1):
+        if i % 2 == 0:
+            answer += i
+    return answer
+
+
 print(solution(10))
+print(solution2(10))

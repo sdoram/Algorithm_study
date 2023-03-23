@@ -7,11 +7,7 @@
 # 1 ≤ n ≤ 10
 
 n = int(input())
-count = 0
-while count < n:
-    count += 1
-    print(count * '*')
+for i in range(1, n + 1):
+    print('*' * i)
 
-n = int(input())
-for i in range(n + 1):
-    print('*' + '*' * i)
+# for문으로 만들면서 range 시작을 (1,)로 정하면 되는걸 print문에 '*'+로 해결했네...

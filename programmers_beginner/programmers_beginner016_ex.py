@@ -7,15 +7,17 @@
 # 제한사항
 # 0 < money ≤ 1,000,000
 
-
 def solution(money):
-    count = 0
-    while money >= 5500:
-        money -= 5500
-        count += 1
-    return [count, money]
-
-# 필요없는 if문을 줄였다!
+    #  나머지 연산자 미사용
+    return [money // 5500, money - money // 5500 * 5500]
 
 
-print(solution(12500))
+print(solution(18600))
+
+
+def solution2(money):
+    # 몫과 나머지 숫자 연산자 사용
+    return [money // 5500, money % 5500]
+
+
+print(solution2(18600))

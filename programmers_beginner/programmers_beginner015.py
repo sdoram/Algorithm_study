@@ -12,8 +12,13 @@
 def solution(my_string):
     answer = ''
     for i in my_string:
-        if i.isupper() == True:
+        if i.isupper():
             answer += i.lower()
         else:
             answer += i.upper()
     return answer
+
+# == True 없어도 가능
+
+
+print(solution('aksdjfASDFASDF'))

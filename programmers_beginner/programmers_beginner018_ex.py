@@ -9,13 +9,13 @@
 # 1 ≤ t ≤ 15
 
 def solution(n, t):
-    while t > 0:
-        t -= 1
-        n *= 2
-    return n
-# 시간마다 *2하고 시간을 t -= 1로 카운트
-# 필요없는 answer 삭제
-# 점수도 +1점 기분도 +1
+    answer = n*2**t
+    return answer
 
 
+# 이해는 가는데 처음부터 만들라고 하면 이렇게 못 만들듯
+# 2**t -> n * (2**t) ()필요 없음
+# 연산자 우선순위 확인
+# ** 4 번
+# * 6 번
 print(solution(10, 5))

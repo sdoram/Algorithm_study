@@ -13,30 +13,7 @@
 # 0 ≤ hp ≤ 1000
 
 def solution(hp):
-    answer = 0
-    while hp > 0:
-        if hp >= 5:
-            hp -= 5
-            answer += 1
-        elif hp >= 3:
-            hp -= 3
-            answer += 1
-        else:
-            hp -= 1
-            answer += 1
+    answer = hp // 5 + hp % 5 // 3 + hp % 5 % 3
+    # 가독성 up
+    answer = (hp // 5) + (hp % 5 // 3) + (hp % 5 % 3)
     return answer
-
-
-def solution2(hp):
-    answer = 0
-    answer += hp // 5
-    hp = hp % 5
-    answer += hp // 3
-    hp = hp % 3
-    answer += hp
-
-    return answer
-
-
-print(solution(373))
-print(solution2(373))

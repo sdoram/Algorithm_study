@@ -24,7 +24,9 @@ def solution(n, k):
 
 
 def solution(n, k):
-    return (n * 12000) + (k-(n // 10)) * 2000
+    return n * 12000 + (k-n // 10) * 2000
+
+# 필요없는 () 삭제
 
 
 print(solution(10, 3))
