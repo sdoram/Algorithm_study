@@ -8,24 +8,21 @@
 
 def solution(n):
     answer = []
-    for i in range(1, n+1):
-        if n % i == 0:
-            answer.append(i)
+    [answer.append(i) for i in range(1, n+1) if n % i == 0]
     return answer
+
+
+print(solution(10))
 
 
 def solution2(n):
     answer = []
-    i = n+1
-    while i > 1:
-        i -= 1
+    answer.append(n)
+    for i in range(1, int(n/2)+1):
         if n % i == 0:
             answer.append(i)
     answer.sort()
     return answer
 
 
-print(solution(10))
 print(solution2(10))
-
-# 와! 3점

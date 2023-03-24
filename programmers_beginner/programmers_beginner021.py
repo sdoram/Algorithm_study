@@ -15,14 +15,32 @@
 def solution(rsp):
     answer = ''
     for i in rsp:
-        if str(i) == '5':
+        if i == '5':
             answer += '2'
-        elif str(i) == '2':
+        elif i == '2':
             answer += '0'
         else:
             answer += '5'
 
     return answer
 
+# 없어도 상관없는 str()형 변환 삭제
+
+
+def solution2(rsp):
+    rsp = list(rsp)
+    answer = ''
+    count = 0
+    while len(rsp) > count:
+        if rsp[count] == '5':
+            answer += '2'
+        elif rsp[count] == '2':
+            answer += '0'
+        else:
+            answer += '5'
+        count += 1
+    return answer
+
 
 print(solution('520250'))
+print(solution2('520250'))

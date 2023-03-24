@@ -11,7 +11,6 @@
 # "zero"는 numbers의 맨 앞에 올 수 없습니다.
 
 def solution(numbers):
-    answer = 0
     numbers = numbers.replace('zero', '0')
     numbers = numbers.replace('one', '1')
     numbers = numbers.replace('two', '2')
@@ -22,8 +21,30 @@ def solution(numbers):
     numbers = numbers.replace('seven', '7')
     numbers = numbers.replace('eight', '8')
     numbers = numbers.replace('nine', '9')
-    answer = numbers
-    return int(answer)
+    return int(numbers)
+
+# 조건문 걸어보려다가 멘탈 나갈뻔한 문제
+# answer 삭제
 
 
-print(solution('onetwothreefourfivesixseveneightnine'))
+print(solution('onetwothreefourfivesixseveneightninezero'))
+
+
+def solution2(numbers):
+    numbers = numbers.replace(
+        'zero', '0').replace(
+        'one', '1').replace(
+        'two', '2').replace(
+        'three', '3').replace(
+        'four', '4').replace(
+        'five', '5').replace(
+        'six', '6').replace(
+        'seven', '7').replace(
+        'eight', '8').replace(
+        'nine', '9')
+    return int(numbers)
+
+# 이렇게 써도 어지럽네
+
+
+print(solution2('onetwothreefourfivesixseveneightninezero'))
