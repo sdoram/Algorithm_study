@@ -12,17 +12,13 @@
 #     answer = 0
 #     return answer
 
-print(dir('a'))
-
-b = 1
-print(dir(b))
-
 
 def solution(my_string):
     answer = 0
-    for i in range(1, len(my_string)+1):
-        if my_string[i-1:i].isdigit():
-            answer += int(my_string[i-1:i])
+    for i in my_string:
+        if i.isdigit():
+            print(i)
+            answer += int(i)
     return answer
 
 

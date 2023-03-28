@@ -18,3 +18,14 @@ def solution(n):
 
 
 print(solution(123))
+
+
+def solution(n):
+    answer = 0
+    n = str(n)
+    for i in range(1, len(n)+1):
+        answer += int(n[i-1:i])
+    return answer
+
+
+print(solution(123))
